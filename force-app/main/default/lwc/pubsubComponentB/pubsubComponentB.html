@@ -1,0 +1,10 @@
+<template>
+      <lightning-card title="Pubsub demo Component B">
+          <div class="slds-p-around_medium">
+              Message Recieved - {message}
+          </div>
+      </lightning-card>
+      <lightning-input type ='number' onkeyup={changeHandler}></lightning-input>
+      <lightning-button label ='publish' onclick={publishHandler}></lightning-button>
+      
+  </template>

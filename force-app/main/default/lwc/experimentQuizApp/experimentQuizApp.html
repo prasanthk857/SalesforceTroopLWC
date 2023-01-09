@@ -1,0 +1,44 @@
+
+<template>
+      <lightning-card title="experimentQuizApp">
+            <div class="slds-var-p-around_medium" >
+                  <form>
+                  <template if:true={isSubmitted}>
+                        <div>you got {correctAnswers} out of {questionObject.length}</div>
+                  </template>
+                  <template for:each={questionObject} for:item="Object">
+                        <div key={Object.id}>
+                              <div class="slds-var-p-around_medium"><strong>{Object.id} - {Object.question}</strong></div>
+                              <div class="slds-grid slds-gutters">
+                                    <div class="slds-col">
+                                          <input type="radio" name ={Object.id} value ='a' onclick={changeHandler}>
+                                          {Object.answers.a}
+                                    </div>
+                                    <div class="slds-col">
+                                          <input type="radio" value ='b' name ={Object.id} onclick={changeHandler}>
+                                          {Object.answers.b}
+                                    </div>
+                                    <div class="slds-col">
+                                          <input type="radio" name ={Object.id} value ='c' onclick={changeHandler}>
+                                          {Object.answers.c}
+                                    </div>
+                                    </div>
+                        </div>
+                  </template>
+                  <div class="slds-p-top_medium"></div>
+                  <div class="slds-grid slds-grid_align-center">
+                        <div class="slds-col slds-size_1-of-6">
+                              <lightning-button class="slds-m-left_x-small" disabled={disableHandle} variant="brand" type ='submit' label="Submit" onclick={submitHandler}></lightning-button>
+                        </div>
+                        <div class="slds-col slds-grow-none">
+                        </div>
+                        <div class="slds-col slds-size_1-of-6">
+                              <lightning-button class="slds-m-left_x-small" type ='reset' variant="brand" label="reset" onclick={resetHandler}></lightning-button>
+
+                        </div>
+                        </div>
+            </form>
+            </div>      
+      </lightning-card>
+      
+</template>

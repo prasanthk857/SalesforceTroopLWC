@@ -1,0 +1,23 @@
+<template>
+      <lightning-card title="Slot Demos">
+        <div class="slds-var-p-around_medium">
+          <c-slot-child-demo>
+            <p slot='first'> name is anonymous </p>
+            <p slot='second'> Age is 25</p>
+            <p slot='footer'> I guess im footer </p>
+
+          </c-slot-child-demo>
+        </div>
+      </lightning-card>
+
+      <lightning-card title="Slot Demos">
+            <div class="slds-var-p-around_medium">
+              <c-slot-child-demo>
+                <p slot='first'> name is anonymous </p>
+                <p slot='second'> Age is 25</p>
+                <!-- <p slot='footer'> I guess im footer </p> -->
+    
+              </c-slot-child-demo>
+            </div>
+          </lightning-card>
+</template>
