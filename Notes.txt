@@ -1,0 +1,7 @@
+Extends keyword is used to extend an existing class by an apex class, and implements keyword is used to implement an interface by an apex class.
+Salesforce Apex doesn’t support multiple inheritances, an apex class can only extend one existing apex class but can implement multiple interfaces.
+
+
+Batchable Context:
+
+Database. Batchable interface must be implemented by an apex class to be used as a batch class. It provides three methods which must be implemented by the batch class.
